@@ -12,9 +12,14 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+from configparser import RawConfigParser
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+CONFIG_FILE = os.path.join(BASE_DIR, 'NITK_CSE_Portal/config.ini')
+config = RawConfigParser()
+config.read(CONFIG_FILE)
 
 
 # Quick-start development settings - unsuitable for production
@@ -75,10 +80,21 @@ WSGI_APPLICATION = 'NITK_CSE_Portal.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': config.get('database', 'NAME'),
+        'HOST': config.get('database', 'HOST'),
+        'USER': config.get('database', 'USER'),
+        'PASSWORD': config.get('database', 'PASSWORD'),
+        'PORT': '3306',
     }
 }
 
