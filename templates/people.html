@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NITK - People</title>
+</head>
+<body>
+<h1>PEOPLE</h1>
+{% block content %}
+
+
+    <h2>FACULTIES</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Designation</th>
+            <th>Joining Date</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Academic Background</th>
+            <th>Area of Interest</th>
+        </tr>
+    {% for faculty in faculties %}
+        <tr>
+            <td>{{ faculty.name }}</td>
+            <td>{{ faculty.designation }}</td>
+            <td>{{ faculty.joining_date }}</td>
+            <td>{{ faculty.email }}</td>
+            <td>{{ faculty.phone }}</td>
+            <td>{{ faculty.academic_background }}</td>
+            <td>{{ faculty.area_of_interest }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+
+    <h2>STAFFS</h2>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Role</th>
+        </tr>
+    {% for staff in staffs %}
+        <tr>
+            <td>{{ staff.name }}</td>
+            <td>{{ staff.role }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+
+    <h2>PROJECT STAFFS</h2>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>email</th>
+            <th>phone</th>
+            <th>project</th>
+        </tr>
+    {% for ps in project_staffs %}
+        <tr>
+            <td>{{ ps.name }}</td>
+            <td>{{ ps.email }}</td>
+            <td>{{ ps.phone }}</td>
+            <td>{{ ps.project }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+
+{% endblock %}
+
+</body>
+</html>
