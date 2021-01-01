@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>NITK - Courses</title>
-</head>
-<body>
-	<center>
+{% extends 'base.html' %}
+
+{% block content %}
 		<h1>Courses</h1>
 		<hr><hr>
 
@@ -43,7 +39,4 @@
 			<hr>
 		{% endfor %}
 
-
-	</center>
-</body>
-</html>
+{% endblock %}
