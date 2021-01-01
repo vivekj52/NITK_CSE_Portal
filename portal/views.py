@@ -20,3 +20,9 @@ def facilities(request):
     template = loader.get_template('facilities.html')
     context = {}
     return HttpResponse(template.render(context, request))
+
+
+def placements(request):
+    template = loader.get_template('placements.html')
+    context = {}
+    return HttpResponse(template.render(context, request))
