@@ -11,11 +11,13 @@ ul {
   width: 100%;
 }
 
-li {
+li
+{
   float: left;
 }
 
-li a {
+li a
+{
   display: block;
   color: white;
   text-align: center;
@@ -23,10 +25,147 @@ li a {
   text-decoration: none;
 }
 
-li a:hover:not(.active) {
+li a:hover:not(.active)
+{
   background-color: #111;
 }
 
-.active {
+.active
+{
   background-color: #4CAF50;
+}
+
+
+footer
+{
+    font-family: 'Poppins', sans-serif;
+    margin-left: 0;
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    background: rgb(0, 0, 0);
+}
+
+
+.footer-content
+{
+    display: flex;
+}
+
+.footer-content .box
+{
+    color:  #818181;
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+
+.footer-section
+{
+    font-size: 0.8rem;
+}
+
+.box h2
+{
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.box .footer-section
+{
+    margin: 20px 0 0 0;
+    position: relative;
+}
+
+.box .footer-section:before
+{
+    position: absolute;
+    content: '';
+    top: -10px;
+    height: 2px;
+    width: 100%;
+    background: #1a1a1a;
+}
+
+.box .footer-section:after
+{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 40%;
+    background: #686565;
+    top: -10px;
+}
+
+.hod-name
+{
+    font-size: 0.9rem;
+    font-weight: 550;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.hod-details
+{
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
+
+.center .footer-section .fas
+{
+    font-size: 1rem;
+    background: #1a1a1a;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.center .footer-section .fas:hover
+{
+    color: #111;
+    background: #ffffff;
+}
+
+.center .footer-section .text
+{
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.center .footer-section .phone
+{
+    margin: 15px 0;
+}
+
+.right .footer-section .fab
+{
+    color: #818181;
+    font-size: 1rem;
+    background: #1a1a1a;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.right .footer-section .fab:hover
+{
+    color: #111;
+    background: #ffffff;
+}
+
+.right .footer-section .text
+{
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding-left: 10px;
 }
