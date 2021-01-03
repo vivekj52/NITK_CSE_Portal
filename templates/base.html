@@ -8,17 +8,28 @@
     <title>CSE Department</title>
 </head>
 <body>
+
 <header>
-    <h1>CSE DEPARTMENT</h1>
-    <ul>
-        <li><a href="{% url 'home' %}">Home</a></li>
-        <li><a href="{% url 'programmes' %}">Programmes</a></li>
-        <li><a href="{% url 'courses' %}">Courses</a></li>
-        <li><a href="{% url 'people' %}">People</a></li>
-        <li><a href="{% url 'placements' %}">Placements</a></li>
-        <li><a href="{% url 'events' %}">Events</a></li>
-        <li><a href="{% url 'facilities' %}">Facilities</a></li>
-    </ul>
+
+  <div class="upper-bar">
+    <a href="https://www.nitk.ac.in/"><img src="{% static 'images/nitk_logo.png' %}" alt="Logo" class="logo"></a>
+    <div class="college-details">
+      <div class="college-name">National Institute of Technology Karnataka, Surathkal</div>
+      <div class="department" id="header">Computer Science And Engineering</div>
+    </div>
+  </div>
+
+  <ul>
+    <li><a class="nav-button" href="{% url 'home' %}">Home</a></li>
+    <li><a class="nav-button" href="{% url 'programmes' %}">Programmes</a></li>
+    <li><a class="nav-button" href="{% url 'courses' %}">Courses</a></li>
+    <li><a class="nav-button" href="{% url 'people' %}">People</a></li>
+    <li><a class="nav-button" href="{% url 'placements' %}">Placements</a></li>
+    <li><a class="nav-button" href="{% url 'events' %}">Events</a></li>
+    <li><a class="nav-button" href="{% url 'facilities' %}">Facilities</a></li>
+  </ul>
+
+
 </header>
 
 
