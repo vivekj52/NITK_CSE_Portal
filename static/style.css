@@ -1,32 +1,297 @@
-body {margin:0;}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  /*position: fixed;*/
-  top: 0;
-  width: 100%;
+* 
+{
+    box-sizing: border-box;
 }
 
-li {
-  float: left;
+html, body
+{
+    margin:0;
+    font-family: 'Poppins', sans-serif;
 }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+header
+{
+    align-items: center;
 }
 
-li a:hover:not(.active) {
-  background-color: #111;
+/*------------------------------------------------- Upper Bar -------------------------------------------------*/
+
+.upper-bar
+{
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 10px 5px #b6b6b6;
+
 }
 
-.active {
-  background-color: #4CAF50;
+.college-details
+{
+    margin-left: 1rem;
 }
+
+.college-name
+{
+    text-transform: uppercase;
+    font-family: monospace;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    padding-top: 0.27rem;
+    text-shadow: 2px 2px 4px #b6b6b6;
+
+}
+
+.department
+{
+    margin-left: -0.1rem;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.70rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px #b6b6b6;
+
+}
+
+.logo
+{
+    margin-left:1rem;
+    margin-bottom: 0.5rem;
+    float:left; 
+    width: 75px;
+}
+
+/*---------------------------------------------- Navigation Bar ----------------------------------------------*/
+
+ul
+{  
+    display: flex;
+    justify-content: center;
+     color: black;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    list-style-type: none;
+    margin-top: 1.2rem;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+li a
+{
+    font-size: 1rem;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    border: 0;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    box-shadow: inset 0 0 0 2px #ffffff;
+    position: relative;
+    text-align: center;
+}
+
+li a::before, li a::after {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+a:hover
+{
+    text-shadow: 2px 2px 4px #a1a1a1;
+}
+
+.nav-button
+{
+    transition: color 0.25s;
+}
+
+.nav-button::before, .nav-button::after
+{
+    border: 2px solid transparent;
+    width: 0;
+    height: 0;
+}
+
+.nav-button::before
+{
+    top: 0;
+    left: 0;
+}
+
+.nav-button::after
+{
+    bottom: 0;
+    right: 0;
+}
+
+.nav-button:hover
+{
+    color: #000000;
+}
+
+.nav-button:hover::before, .nav-button:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-button:hover::before {
+    border-top-color: #000000;
+    border-right-color: #000000;
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+
+.nav-button:hover::after
+{
+    border-bottom-color: #000000;
+    border-left-color: #000000;
+    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+}
+
+/*--------------------------------------------- Home Page Content ---------------------------------------------*/
+
+
+
+/*---------------------------------------------- Footer Content ----------------------------------------------*/
+
+footer
+{
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-top: 19%;
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    box-shadow: 0 -10px 5px #b6b6b6;
+}
+
+.footer-content
+{
+    display: flex;
+}
+
+.footer-content .box
+{
+    color:  #818181;
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+
+.footer-section
+{
+    font-size: 0.8rem;
+}
+
+.box h2
+{
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.box .footer-section
+{
+    margin: 20px 0 0 0;
+    position: relative;
+}
+
+.box .footer-section:before
+{
+    position: absolute;
+    content: '';
+    top: -10px;
+    height: 2px;
+    width: 100%;
+    background: #1a1a1a;
+}
+
+.box .footer-section:after
+{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 40%;
+    background: #686565;
+    top: -10px;
+}
+
+.hod-name
+{
+    font-size: 0.9rem;
+    font-weight: 550;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.hod-details
+{
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
+
+.center .footer-section .fas
+{
+    font-size: 1rem;
+    background: #1a1a1a;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.center .footer-section .fas:hover
+{
+    color: #111;
+    background: #ffffff;
+}
+
+.center .footer-section .text
+{
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.center .footer-section .phone
+{
+    margin: 15px 0;
+}
+
+.right .footer-section .fab
+{
+    color: #818181;
+    font-size: 1rem;
+    background: #1a1a1a;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.right .footer-section .fab:hover
+{
+    color: #111;
+    background: #ffffff;
+}
+
+.right .footer-section .text
+{
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+/*-------------------------------------------------------------------------------------------------------------*/
