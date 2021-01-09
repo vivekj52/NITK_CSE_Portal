@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+Profile
+<br>
+Role : {{ group }}
+<br>
+
+Name: {{ user.first_name }} {{ user.last_name }}
+
+<form method='POST' enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type='submit'>Update</button>
+</form>
+
+{% endblock %}
