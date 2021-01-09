@@ -63,7 +63,7 @@ header
 
 /*---------------------------------------------- Navigation Bar ----------------------------------------------*/
 
-ul
+ul.nav-bar
 {  
     display: flex;
     justify-content: center;
@@ -155,7 +155,70 @@ a:hover
 
 /*--------------------------------------------- Home Page Content ---------------------------------------------*/
 
+.dept-image
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.5s; 
+    overflow: hidden;
+}
 
+.dept-image:hover
+{
+    transform: scale(1.04); 
+}
+
+hr.uline 
+{
+    border: 1px solid rgb(92, 87, 87);
+}
+
+.first-container
+{
+    margin: 2rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border: double;
+    border-radius: 5px;
+    
+}
+
+.about-us
+{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
+.second-container
+{
+    margin: 2rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border: double;
+    border-radius: 5px;  
+}
+
+.vision
+{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
+.third-container
+{
+    margin: 2rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border: double;
+    border-radius: 5px; 
+}
+
+.mission
+{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+
+}
 
 /*---------------------------------------------- Footer Content ----------------------------------------------*/
 
@@ -163,7 +226,6 @@ footer
 {
     margin-left: 0;
     margin-bottom: 0;
-    margin-top: 19%;
     position: relative;
     bottom: 0px;
     width: 100%;
