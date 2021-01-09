@@ -1,42 +1,73 @@
 {% extends 'base.html' %}
 
 {% block content %}
-		<h1>Courses</h1>
-		<hr><hr>
 
-		<h2>Undergraduate</h2>
-		{% for u in ug %}
-			<p>Course Name: {{ u.coursename }}</p>
-			<p>Programme: {{ u.programme }}</p>
-			<p>Semseter: {{ u.semester }}</p>
-			<p>Content: {{ u.content }}</p>
-			<p>Department: {{ u.department }}</p>
-			<p>Instructor: {{ u.instructor }}</p>
-			<hr>
+		<h2>Under Graduate</h2>
+
+    <table>
+        <tr>
+            <th>Course Name</th>
+            <th>Programme</th>
+            <th>Semester</th>
+            <th>Content</th>
+            <th>Department</th>
+            <th>Instructor</th>
+        </tr>
+
+        {% for u in ug %}
+            <tr>
+			<td>{{ u.coursename }}</td>
+			<td>{{ u.programme }}</td>
+			<td>{{ u.semester }}</td>
+			<td>{{ u.content }}</td>
+			<td>{{ u.department }}</td>
+			<td>{{ u.instructor }}</td>
+			</tr>
 		{% endfor %}
+    </table>
+
 		
+<h2>Post Graduate</h2>
+		<table>
+        <tr>
+            <th>Course Name</th>
+            <th>Programme</th>
+            <th>Semester</th>
+            <th>Content</th>
+            <th>Department</th>
+            <th>Instructor</th>
+        </tr>
 
-		<hr><hr>
-		<h2>Postgraduate</h2>
-		{% for p in pg %}
-			<p>Course Name: {{ p.coursename }}</p>
-			<p>Programme: {{ p.programme }}</p>
-			<p>Semseter: {{ p.semester }}</p>
-			<p>Content: {{ p.content }}</p>
-			<p>Department: {{ p.department }}</p>
-			<p>Instructor: {{ p.instructor }}</p>
-			<hr>
+        {% for u in pg %}
+            <tr>
+			<td>{{ u.coursename }}</td>
+			<td>{{ u.programme }}</td>
+			<td>{{ u.semester }}</td>
+			<td>{{ u.content }}</td>
+			<td>{{ u.department }}</td>
+			<td>{{ u.instructor }}</td>
+			</tr>
 		{% endfor %}
+    </table>
 
+    <h2>Doctoral</h2>
+		<table>
+        <tr>
+            <th>Course Name</th>
+            <th>Programme</th>
+            <th>Content</th>
+            <th>Department</th>
+        </tr>
 
-		<hr><hr>
-		<h2>Doctoral</h2>
-		{% for d in dc %}
-			<p>Course Name: {{ d.coursename }}</p>
-			<p>Programme: {{ d.programme }}</p>
-			<p>Content: {{ d.content }}</p>
-			<p>Department: {{ d.department }}</p>
-			<hr>
+        {% for d in dc %}
+            <tr>
+			<td>{{ d.coursename }}</td>
+			<td>{{ d.programme }}</td>
+			<td>{{ d.content }}</td>
+			<td>{{ d.department }}</td>
+			</tr>
 		{% endfor %}
+    </table>
+
 
 {% endblock %}
