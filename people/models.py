@@ -18,6 +18,9 @@ class Faculty(models.Model):
     academic_background = models.TextField(max_length=500, default='')
     area_of_interest = models.TextField(max_length=200, default='')
 
+    def __str__(self):
+        return self.user.first_name + ' ' + self.user.last_name
+
 
 class Staff(models.Model):
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
@@ -27,8 +30,16 @@ class Staff(models.Model):
                      ('LA', 'LAB ASSISTANT')]
     role = models.CharField(choices=ROLES_CHOICES, max_length=20)
 
+    def __str__(self):
+        return self.user.first_name + ' ' + self.user.last_name
+
 
 class ProjectStaff(models.Model):
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
+    supervisor = models.ForeignKey(Faculty, null=True, on_delete=models.SET_NULL)
     phone = models.CharField(max_length=20)
     project = models.TextField(max_length=100)
+    area_of_interest = models.TextField(max_length=200, default='')
+
+    def __str__(self):
+        return self.user.first_name + ' ' + self.user.last_name

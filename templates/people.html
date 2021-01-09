@@ -16,7 +16,7 @@
     {% for faculty in faculties %}
         <tr>
             <td>{{ faculty.user.first_name }} {{ faculty.user.last_name }}</td>
-            <td>{{ faculty.designation }}</td>
+            <td>{{ faculty.get_designation_display }}</td>
             <td>{{ faculty.joining_date }}</td>
             <td>{{ faculty.user.email }}</td>
             <td>{{ faculty.phone }}</td>
@@ -31,9 +31,11 @@
     <table>
         <tr>
             <th>Name</th>
-            <th>email</th>
-            <th>phone</th>
-            <th>project</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Project</th>
+            <th>Supervisor</th>
+            <th>Area of Interest</th>
         </tr>
     {% for ps in project_staffs %}
         <tr>
@@ -41,6 +43,8 @@
             <td>{{ ps.user.email }}</td>
             <td>{{ ps.phone }}</td>
             <td>{{ ps.project }}</td>
+            <td>{{ ps.supervisor.user.first_name }} {{ ps.supervisor.user.last_name }}</td>
+            <td>{{ ps.area_of_interest }}</td>
         </tr>
     {% endfor %}
     </table>
@@ -55,7 +59,7 @@
     {% for staff in staffs %}
         <tr>
             <td>{{ staff.user.first_name }}{{ staff.user.last_name }}</td>
-            <td>{{ staff.role }}</td>
+            <td>{{ staff.get_role_display }}</td>
         </tr>
     {% endfor %}
     </table>
