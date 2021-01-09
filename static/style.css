@@ -225,6 +225,34 @@ a:hover
     line-height: 1.5rem;
 }
 
+/*------------------------------------------------ Facilities ------------------------------------------------*/
+
+.facilities-container
+{
+    margin: 2rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border: double;
+    border-radius: 5px;  
+}
+
+.facilities-subheading
+{
+    margin-top: 2.5rem;
+}
+
+.facilities-content
+{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
+.facilities-list
+{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
+
 /*---------------------------------------------- Footer Content ----------------------------------------------*/
 
 footer
