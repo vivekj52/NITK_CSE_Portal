@@ -14,6 +14,11 @@ header
     align-items: center;
 }
 
+hr.uline
+{
+    border: 1px solid rgb(92, 87, 87);
+}
+
 /*------------------------------------------------- Upper Bar -------------------------------------------------*/
 
 .upper-bar
@@ -171,12 +176,7 @@ a:hover
     transform: scale(1.04); 
 }
 
-hr.uline 
-{
-    border: 1px solid rgb(92, 87, 87);
-}
-
-.first-container
+.home-container
 {
     margin: 2rem;
     padding: 0.5rem 1rem 0.5rem 1rem;
@@ -191,26 +191,10 @@ hr.uline
     line-height: 1.5rem;
 }
 
-.second-container
-{
-    margin: 2rem;
-    padding: 0.5rem 1rem 0.5rem 1rem;
-    border: double;
-    border-radius: 5px;  
-}
-
 .vision
 {
     font-size: 0.9rem;
     line-height: 1.5rem;
-}
-
-.third-container
-{
-    margin: 2rem;
-    padding: 0.5rem 1rem 0.5rem 1rem;
-    border: double;
-    border-radius: 5px; 
 }
 
 .mission
@@ -218,6 +202,27 @@ hr.uline
     font-size: 0.9rem;
     line-height: 1.5rem;
 
+}
+
+/*------------------------------------------------ Programmes ------------------------------------------------*/
+
+.prog-container
+{
+    margin: 2rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border: double;
+    border-radius: 5px;  
+}
+
+.prog-subheading
+{
+    margin-top: 2.5rem;
+}
+
+.prog-content
+{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
 }
 
 /*---------------------------------------------- Footer Content ----------------------------------------------*/
