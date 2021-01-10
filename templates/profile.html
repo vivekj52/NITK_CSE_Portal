@@ -9,10 +9,10 @@ Role : {{ group }}
 
 Name: {{ user.first_name }} {{ user.last_name }}
 
-<form method='POST' enctype="multipart/form-data">
+<form class="update-profile" method='POST' enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type='submit'>Update</button>
+    <button class="login-btn" type='submit'>Update</button>
 </form>
 
 {% endblock %}

@@ -18,17 +18,16 @@
       <div class="college-name">National Institute of Technology Karnataka, Surathkal</div>
       <div class="department" id="header">Computer Science And Engineering</div>
     </div>
-      <div>
+      <div class="user-info">
           {% if user.is_authenticated %}
                 <p>Hi {{ user.username }}!({{ user.first_name }} {{ user.last_name }})<br>
 {#                    {{ user.email }}<br></p>#}
 {#                Last login: {{ user.last_login }}<br>#}
-                <a href="{% url 'profile' %}">PROFILE</a>
-                <a href="{% url 'logout' %}">LOGOUT</a>
+                <a class="login-btn" href="{% url 'profile' %}">PROFILE</a>
+                <a class="login-btn" href="{% url 'logout' %}">LOGOUT</a>
                 <br>
             {% else %}
-                <p>You are not logged in</p>
-                <a href="{% url 'login' %}">Log In</a>
+                <a class="login-btn" href="{% url 'login' %}">LOG IN</a>
             {% endif %}
       </div>
   </div>
