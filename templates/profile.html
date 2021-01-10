@@ -2,17 +2,23 @@
 
 {% block content %}
 
-Profile
-<br>
-Role : {{ group }}
-<br>
+    <div class="prog-content">
+        <div class="prog-container">
+            <br>
+            Role : {{ group }}
+            <br>
 
-Name: {{ user.first_name }} {{ user.last_name }}
+            Name: {{ user.first_name }} {{ user.last_name }}
 
-<form class="update-profile" method='POST' enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button class="login-btn" type='submit'>Update</button>
-</form>
+            <form class="update-profile" method='POST' enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="login-btn" type='submit'>Update</button>
+                <a href="{% url 'home' %}" class="login-btn">Cancel</a>
+            </form>
+            <br>
+            <br>
+        </div>
+    </div>
 
 {% endblock %}

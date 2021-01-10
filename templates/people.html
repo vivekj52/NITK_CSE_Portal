@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    <h2>FACULTIES</h2>
+    <center><h3>Faculties</h3></center>
     <table id="people">
         <tr>
             <th>Name</th>
@@ -13,20 +13,20 @@
             <th>Academic Background</th>
             <th>Area of Interest</th>
         </tr>
-    {% for faculty in faculties %}
-        <tr>
-            <td>{{ faculty.user.first_name }} {{ faculty.user.last_name }}</td>
-            <td>{{ faculty.get_designation_display }}</td>
-            <td>{{ faculty.joining_date }}</td>
-            <td>{{ faculty.user.email }}</td>
-            <td>{{ faculty.phone }}</td>
-            <td>{{ faculty.academic_background }}</td>
-            <td>{{ faculty.area_of_interest }}</td>
-        </tr>
-    {% endfor %}
+        {% for faculty in faculties %}
+            <tr>
+                <td>{{ faculty.user.first_name }} {{ faculty.user.last_name }}</td>
+                <td>{{ faculty.get_designation_display }}</td>
+                <td>{{ faculty.joining_date }}</td>
+                <td>{{ faculty.user.email }}</td>
+                <td>{{ faculty.phone }}</td>
+                <td>{{ faculty.academic_background }}</td>
+                <td>{{ faculty.area_of_interest }}</td>
+            </tr>
+        {% endfor %}
     </table>
 
-    <h2>PROJECT STAFFS</h2>
+    <center><h3>Project Staffs</h3></center>
 
     <table id="people">
         <tr>
@@ -37,31 +37,31 @@
             <th>Supervisor</th>
             <th>Area of Interest</th>
         </tr>
-    {% for ps in project_staffs %}
-        <tr>
-            <td>{{ ps.user.first_name }}{{ ps.user.last_name }}</td>
-            <td>{{ ps.user.email }}</td>
-            <td>{{ ps.phone }}</td>
-            <td>{{ ps.project }}</td>
-            <td>{{ ps.supervisor.user.first_name }} {{ ps.supervisor.user.last_name }}</td>
-            <td>{{ ps.area_of_interest }}</td>
-        </tr>
-    {% endfor %}
+        {% for ps in project_staffs %}
+            <tr>
+                <td>{{ ps.user.first_name }}{{ ps.user.last_name }}</td>
+                <td>{{ ps.user.email }}</td>
+                <td>{{ ps.phone }}</td>
+                <td>{{ ps.project }}</td>
+                <td>{{ ps.supervisor.user.first_name }} {{ ps.supervisor.user.last_name }}</td>
+                <td>{{ ps.area_of_interest }}</td>
+            </tr>
+        {% endfor %}
     </table>
 
-    <h2>STAFFS</h2>
+    <center><h3>Staffs</h3></center>
 
     <table id="people">
         <tr>
             <th>Name</th>
             <th>Role</th>
         </tr>
-    {% for staff in staffs %}
-        <tr>
-            <td>{{ staff.user.first_name }}{{ staff.user.last_name }}</td>
-            <td>{{ staff.get_role_display }}</td>
-        </tr>
-    {% endfor %}
+        {% for staff in staffs %}
+            <tr>
+                <td>{{ staff.user.first_name }}{{ staff.user.last_name }}</td>
+                <td>{{ staff.get_role_display }}</td>
+            </tr>
+        {% endfor %}
     </table>
 
 {% endblock %}

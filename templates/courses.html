@@ -2,7 +2,7 @@
 
 {% block content %}
 
-		<h2>Under Graduate</h2>
+    <center><h3>Undergraduate</h3></center>
 
     <table id="people">
         <tr>
@@ -16,19 +16,19 @@
 
         {% for u in ug %}
             <tr>
-			<td>{{ u.coursename }}</td>
-			<td>{{ u.programme }}</td>
-			<td>{{ u.semester }}</td>
-			<td>{{ u.content }}</td>
-			<td>{{ u.department }}</td>
-			<td>{{ u.instructor }}</td>
-			</tr>
-		{% endfor %}
+                <td>{{ u.coursename }}</td>
+                <td>{{ u.programme }}</td>
+                <td>{{ u.semester }}</td>
+                <td>{{ u.content }}</td>
+                <td>{{ u.department }}</td>
+                <td>{{ u.instructor }}</td>
+            </tr>
+        {% endfor %}
     </table>
 
-		
-<h2>Post Graduate</h2>
-		<table id="people">
+
+    <center><h3>Postgraduate</h3></center>
+    <table id="people">
         <tr>
             <th>Course Name</th>
             <th>Programme</th>
@@ -40,18 +40,18 @@
 
         {% for u in pg %}
             <tr>
-			<td>{{ u.coursename }}</td>
-			<td>{{ u.programme }}</td>
-			<td>{{ u.semester }}</td>
-			<td>{{ u.content }}</td>
-			<td>{{ u.department }}</td>
-			<td>{{ u.instructor }}</td>
-			</tr>
-		{% endfor %}
+                <td>{{ u.coursename }}</td>
+                <td>{{ u.programme }}</td>
+                <td>{{ u.semester }}</td>
+                <td>{{ u.content }}</td>
+                <td>{{ u.department }}</td>
+                <td>{{ u.instructor }}</td>
+            </tr>
+        {% endfor %}
     </table>
 
-    <h2>Doctoral</h2>
-		<table id="people">
+    <center><h3>Doctoral</h3></center>
+    <table id="people">
         <tr>
             <th>Course Name</th>
             <th>Programme</th>
@@ -61,12 +61,12 @@
 
         {% for d in dc %}
             <tr>
-			<td>{{ d.coursename }}</td>
-			<td>{{ d.programme }}</td>
-			<td>{{ d.content }}</td>
-			<td>{{ d.department }}</td>
-			</tr>
-		{% endfor %}
+                <td>{{ d.coursename }}</td>
+                <td>{{ d.programme }}</td>
+                <td>{{ d.content }}</td>
+                <td>{{ d.department }}</td>
+            </tr>
+        {% endfor %}
     </table>
 
 

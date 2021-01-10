@@ -12,35 +12,35 @@
 
 <header>
 
-  <div class="upper-bar">
-    <a href="https://www.nitk.ac.in/"><img src="{% static 'images/nitk_logo.png' %}" alt="Logo" class="logo"></a>
-    <div class="college-details">
-      <div class="college-name">National Institute of Technology Karnataka, Surathkal</div>
-      <div class="department" id="header">Computer Science And Engineering</div>
-    </div>
-      <div class="user-info">
-          {% if user.is_authenticated %}
+    <div class="upper-bar">
+        <a href="https://www.nitk.ac.in/"><img src="{% static 'images/nitk_logo.png' %}" alt="Logo" class="logo"></a>
+        <div class="college-details">
+            <div class="college-name">National Institute of Technology Karnataka, Surathkal</div>
+            <div class="department" id="header">Computer Science And Engineering</div>
+        </div>
+        <div class="user-info">
+            {% if user.is_authenticated %}
                 <p>Hi {{ user.username }}!({{ user.first_name }} {{ user.last_name }})<br>
-{#                    {{ user.email }}<br></p>#}
-{#                Last login: {{ user.last_login }}<br>#}
+                {#                    {{ user.email }}<br></p>#}
+                {#                Last login: {{ user.last_login }}<br>#}
                 <a class="login-btn" href="{% url 'profile' %}">PROFILE</a>
                 <a class="login-btn" href="{% url 'logout' %}">LOGOUT</a>
                 <br>
             {% else %}
                 <a class="login-btn" href="{% url 'login' %}">LOG IN</a>
             {% endif %}
-      </div>
-  </div>
+        </div>
+    </div>
 
-  <ul class="nav-bar">
-    <li><a class="nav-button" href="{% url 'home' %}">Home</a></li>
-    <li><a class="nav-button" href="{% url 'programmes' %}">Programmes</a></li>
-    <li><a class="nav-button" href="{% url 'courses' %}">Courses</a></li>
-    <li><a class="nav-button" href="{% url 'people' %}">People</a></li>
-    <li><a class="nav-button" href="{% url 'placements' %}">Placements</a></li>
-    <li><a class="nav-button" href="{% url 'events' %}">Events</a></li>
-    <li><a class="nav-button" href="{% url 'facilities' %}">Facilities</a></li>
-  </ul>
+    <ul class="nav-bar">
+        <li><a class="nav-button" href="{% url 'home' %}">Home</a></li>
+        <li><a class="nav-button" href="{% url 'programmes' %}">Programmes</a></li>
+        <li><a class="nav-button" href="{% url 'courses' %}">Courses</a></li>
+        <li><a class="nav-button" href="{% url 'people' %}">People</a></li>
+        <li><a class="nav-button" href="{% url 'placements' %}">Placements</a></li>
+        <li><a class="nav-button" href="{% url 'events' %}">Events</a></li>
+        <li><a class="nav-button" href="{% url 'facilities' %}">Facilities</a></li>
+    </ul>
 
 </header>
 
@@ -52,50 +52,50 @@
 
 <footer>
     <div class="footer-content">
-      <div class="left box">
-        <div class="hod-name">Dr. Alwyn Roshan Pais</div>
-        <div class="hod-details">Head of the Department<br>Department of CSE, NITK, Surathkal</div>
-      </div>
-
-      <div class="center box">
-
-        <h2>Contact Us</h2>
-        <div class="footer-section">
-          <div class="place">
-            <span class="fas fa-map-marker-alt"></span>
-            <span class="text">Mangalore, Karnataka, India</span>
-          </div>
-
-          <div class="phone">
-            <span class="fas fa-phone-alt"></span>
-            <span class="text">+91-0824-2474053</span>
-          </div>
-
-          <div class="email">
-            <span class="fas fa-envelope"></span>
-            <span class="text">hodcse@nitk.edu.in</span>
-          </div>
-
+        <div class="left box">
+            <div class="hod-name">Dr. Alwyn Roshan Pais</div>
+            <div class="hod-details">Head of the Department<br>Department of CSE, NITK, Surathkal</div>
         </div>
-      </div>
 
-      <div class="right box">
+        <div class="center box">
 
-        <h2>Connect With Us</h2>
-        <div class="footer-section">
-          <p>We are available on Social Networks. Follow us and get in touch to get our updates.</p>
+            <h2>Contact Us</h2>
+            <div class="footer-section">
+                <div class="place">
+                    <span class="fas fa-map-marker-alt"></span>
+                    <span class="text">Mangalore, Karnataka, India</span>
+                </div>
 
-          <div class="social">
-            <a href="#"><span class="fab fa-facebook-f"></span></a>
-            <a href="#"><span class="fab fa-twitter"></span></a>
-            <a href="#"><span class="fab fa-vimeo"></span></a>
-            <a href="#"><span class="fab fa-google-plus-g"></span></a>
-          </div>
+                <div class="phone">
+                    <span class="fas fa-phone-alt"></span>
+                    <span class="text">+91-0824-2474053</span>
+                </div>
 
+                <div class="email">
+                    <span class="fas fa-envelope"></span>
+                    <span class="text">hodcse@nitk.edu.in</span>
+                </div>
+
+            </div>
         </div>
-      </div>
+
+        <div class="right box">
+
+            <h2>Connect With Us</h2>
+            <div class="footer-section">
+                <p>We are available on Social Networks. Follow us and get in touch to get our updates.</p>
+
+                <div class="social">
+                    <a href="#"><span class="fab fa-facebook-f"></span></a>
+                    <a href="#"><span class="fab fa-twitter"></span></a>
+                    <a href="#"><span class="fab fa-vimeo"></span></a>
+                    <a href="#"><span class="fab fa-google-plus-g"></span></a>
+                </div>
+
+            </div>
+        </div>
     </div>
-  </footer>
+</footer>
 
 </body>
 </html>
