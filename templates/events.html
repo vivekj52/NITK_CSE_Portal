@@ -1,17 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-		
-		<h1>Events</h1>
-		
-		<hr><hr>
+
 		<h2>Workshops</h2>
 		{% for w in ws %}
-			<p>Event : {{w.event}}</p>
+
 			<p>Title : {{w.title}}</p>
 			<p>Status : {{w.status}}</p>
-			<p>Duration : {{w.duration}}</p>
-			<p>Dates : {{w.dates}}</p>
+
+			<p>Dates : {{w.from_date}}</p>
+			<p>Dates : {{w.to_date}}</p>
 			<p>Organizers : {{w.organizers}}</p>
 			<p>Place : {{w.place}}</p>
 		<hr>
@@ -20,16 +18,17 @@
 		<hr><hr>
 		<h2>Conferences</h2>
 		{% for c in cf %}
-			<p>Event : {{c.event}}</p>
+
 			<p>Title : {{c.title}}</p>
 			<p>Status : {{c.status}}</p>
 			<p>Sponsored : {{c.sponsored}}</p>
-			<p>Duration : {{c.duration}}</p>
-			<p>Dates : {{c.dates}}</p>
+
+			<p>Dates : {{c.from_date}}</p>
+			<p>Dates : {{c.to_date}}</p>
 			<p>Organizers : {{c.organizers}}</p>
-			<p>Website Link : {{c.websitelink}}</p>
+			<p>Website Link : {{c.website_link}}</p>
 			<p>CFP : {{c.cfp}}</p>
-			<p>Paper Submission Due : {{c.paperdue}}</p>
+			<p>Paper Submission Due : {{c.paper_submission_de}}</p>
 		<hr>
 		{% endfor%}
 
