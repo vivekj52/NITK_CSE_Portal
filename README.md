@@ -3,9 +3,10 @@ Computing Lab Assignment 4
 
 ## Technology Used
 
-Python, HTML, CSS
+Python, HTML, CSS, MySQL
 
 ## Local Settings in config.ini
 
-Local DB configurations
-Don't commit config.ini
+Local Database configurations
+
+Database dump in separate folder
