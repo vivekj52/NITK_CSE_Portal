@@ -278,6 +278,14 @@ a:hover
 {
     font-size: 0.9rem;
     line-height: 1.5rem;
+}   
+
+.lab-facilities
+{
+    margin: auto;
+    margin-left: 7rem;
+    display: inline-flex;
+    column-gap: 10rem;
 }
 
 .facilities-list
