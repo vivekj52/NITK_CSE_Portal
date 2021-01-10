@@ -14,6 +14,11 @@ header
     align-items: center;
 }
 
+hr.uline
+{
+    border: 1px solid rgb(92, 87, 87);
+}
+
 /*------------------------------------------------- Upper Bar -------------------------------------------------*/
 
 .upper-bar
@@ -171,12 +176,7 @@ a:hover
     transform: scale(1.04); 
 }
 
-hr.uline 
-{
-    border: 1px solid rgb(92, 87, 87);
-}
-
-.first-container
+.home-container
 {
     margin: 2rem;
     padding: 0.5rem 1rem 0.5rem 1rem;
@@ -191,26 +191,10 @@ hr.uline
     line-height: 1.5rem;
 }
 
-.second-container
-{
-    margin: 2rem;
-    padding: 0.5rem 1rem 0.5rem 1rem;
-    border: double;
-    border-radius: 5px;  
-}
-
 .vision
 {
     font-size: 0.9rem;
     line-height: 1.5rem;
-}
-
-.third-container
-{
-    margin: 2rem;
-    padding: 0.5rem 1rem 0.5rem 1rem;
-    border: double;
-    border-radius: 5px; 
 }
 
 .mission
@@ -219,6 +203,89 @@ hr.uline
     line-height: 1.5rem;
 
 }
+
+/*------------------------------------------------ Programmes ------------------------------------------------*/
+
+.prog-container
+{
+    margin: 2rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border: double;
+    border-radius: 5px;  
+}
+
+.prog-subheading
+{
+    margin-top: 2.5rem;
+}
+
+.prog-content
+{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
+/*------------------------------------------------ Placements ------------------------------------------------*/
+
+.placement-line
+{
+    width: 60%;
+    margin-bottom: 2.5rem;
+}
+
+.placement-content
+{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+.placement-image
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 60%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.5s; 
+    overflow: hidden;
+}
+
+.placement-image:hover
+{
+    transform: scale(1.04); 
+}
+
+/*------------------------------------------------ Facilities ------------------------------------------------*/
+
+.facilities-container
+{
+    margin: 2rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border: double;
+    border-radius: 5px;  
+}
+
+.facilities-subheading
+{
+    margin-top: 2.5rem;
+}
+
+.facilities-content
+{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
+.facilities-list
+{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
 
 /*---------------------------------------------- Footer Content ----------------------------------------------*/
 
